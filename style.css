@@ -1,0 +1,222 @@
+@font-face {
+    font-family: HankenGrotesk;
+    src: url("./assets/fonts/HankenGrotesk-VariableFont_wght.ttf");
+}
+
+:root{
+    --dark-blue: hsl(224, 30%, 27%);
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+img, svg{
+    max-width: 100%;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    font-family: HankenGrotesk, sans-serif;
+}
+
+.main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.result{
+    background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%)) top;
+    width: 100%;
+    height: 40vh;
+    border-radius: 0 0 2em 2em;
+    color: hsl(241, 100%, 89%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5em 1.5em 2.3em 1.5em ;
+    text-align: center;
+}
+
+.result-title, .summary-title{
+    font-size: 1em;
+    width: 100%;
+}
+
+.score-display{
+    background: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+    border-radius: 50%;
+    width: 30vw;
+    height: 30vw;
+    display: grid;
+    place-content: center;
+}
+
+.score-achieved{
+    font-size: 2.8em;
+    font-weight: 700;
+    color: white;
+}
+
+.score-total{
+    font-size: 0.8em;
+    opacity: 0.6;
+}
+
+.result-score{
+    color: white;
+    font-size: 1.4em;
+    margin-bottom: 0.7em;
+}
+
+.result-desc{
+    font-size: 1em;
+    margin: 0 2.5em;
+}
+
+.summary{
+    width: 100%;
+    padding: 1em 1.5em;
+    color: hsl(224, 30%, 27%);
+}
+
+.summary-list{
+    list-style: none;
+    width: 100%;
+    margin: 1.5em 0 3em 0;
+}
+
+.summary-list-item{
+    background: hsla(0, 100%, 67%, 0.15);
+    color: hsl(0, 100%, 67%);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    padding: 1em 1em;
+    margin-bottom: 1em;
+    border-radius: 0.6em;
+    justify-content: space-between;
+    font-size: 1em;
+    font-weight: 500;
+}
+
+.yellow{
+    background: hsla(39, 100%, 56%, 0.15);
+    color: hsl(39, 100%, 56%);
+}
+
+.green{
+    background: hsla(166, 100%, 37%, 0.15);
+    color: hsl(166, 100%, 37%);
+}
+
+.blue{
+    background: hsla(234, 85%, 45%, 0.15);
+    color: hsl(234, 85%, 45%);
+}
+
+.continue-button{
+    display: block;
+    background: var(--dark-blue);
+    border: 0;
+    border-radius: 2em;
+    width: 100%;
+    height: 3.5em;
+    color: white;
+    font-weight: 700;
+    font-size: 1em;
+}
+
+.continue-button:hover{
+    background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+}
+
+.summary-score-achieved{
+    color: var(--dark-blue);
+}
+
+.summary-score-total{
+    color: hsl(241, 100%, 89%);
+}
+
+.summary-score-title{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100px;
+}
+
+.summary-item-title{
+    margin-left: 0.8em;
+}
+
+@media only screen and (min-width: 600px) {
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .main{
+        display: flex;
+        flex-direction: row;
+        width: 40%;
+        height: 60vh;
+        border-radius: 2em;
+        box-shadow: 0 0 0.8em 0.8em rgba(0, 0, 0, 0.15);
+        margin-bottom: 2em;
+    }
+
+    .result{
+        border-radius: 2em;
+        width: 50%;
+        height: 100%;
+        max-height: 100%;
+        margin: 0;
+    }
+
+    .result-desc{
+        font-size: 0.9em;
+    }
+
+    .summary{
+        width: 50%;
+        height: 100%;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 1.5em 2.3em 2.5em 2.3em;
+    }
+
+    .summary-list-item{
+        padding: 0.7em 1.2em;
+        font-size: 0.8em;
+    }
+
+    .score-display{
+        width: 9em;
+        height: 9em;
+    }
+
+    .summary-list{
+        margin: 0;
+    }
+
+    .continue-button{
+        margin: 0;
+        height: 3.2em;
+        font-size: 0.8em;
+    }
+  }
