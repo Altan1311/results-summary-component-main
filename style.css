@@ -171,8 +171,8 @@ body{
     .main{
         display: flex;
         flex-direction: row;
-        width: 40%;
-        height: 60vh;
+        width: 40vw;
+        height: 28vw;
         border-radius: 2em;
         box-shadow: 0 0 0.8em 0.8em rgba(0, 0, 0, 0.15);
         margin-bottom: 2em;
